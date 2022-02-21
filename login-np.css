@@ -1,0 +1,48 @@
+:root {
+  --ruby: #982649;
+  --lsbl: #BCD2EE;
+  --dcbl: #26408B;
+  --spbl: #171738;
+  --black: #000000; 
+}
+
+h1{
+  text-align: center;
+}
+
+h2{
+  text-align: center;
+}
+
+form{
+  align-items: center;
+}
+
+.container {
+  background-color: var(--lsbl);
+  color: var(--black);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  border: var(--dcbl) solid 1px;
+  width:20rem;
+  align-self: center;
+  margin: auto;
+  padding:1rem;
+}
+
+.button {
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  margin:auto;
+  padding: 
+}
+
+.form-group{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
