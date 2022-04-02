@@ -1,0 +1,113 @@
+:root {
+    --ruby: #982649;
+    --lsbl: #BCD2EE;
+    --dcbl: #26408B;
+    --spbl: #171738;
+    --black: #000000;
+    --white: #eeeeee; 
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* this is where you'll probs define your font family font-family: blah blah */
+}
+
+html {
+    font-size: 40%
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    /* background-color: var(--lsbl); */
+    color: var(--white) ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calendar {
+    width: 90%;
+    height: 80%;
+    background-color: var(--lsbl);
+    /* box-shadow: 0 0.5rem 3rem black */
+}
+
+.month {
+    width: 100%;
+    height: 12rem;
+    background-color: var(--spbl);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    text-align: center;
+}
+
+.month i {
+    font-size: 5rem;
+    cursor: pointer;
+}
+
+.month h1{
+    font-size: 5rem;
+    font-weight: 300;
+    margin-bottom: .25rem ;
+}
+
+.month p {
+    font-size: 3rem;
+}
+
+.weekdays {
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 0 3rem;
+}
+
+.weekdays div{
+    color: var(--black);
+    padding: 7px;
+    margin: 7px;
+    width: calc(105rem/7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3.5rem;
+    font-weight: 200;
+    border: var(--black) 2px solid;
+}
+
+.days{
+    width: 100%;
+    display: flex;
+    /* justify-content:; */
+    flex-wrap: wrap;
+    padding: 5rem;
+    
+}
+
+.days div{
+    color: var(--black);
+    font-size: 3rem;
+    width:calc(105rem/7);
+    height: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: var(--black) 2px solid;
+}
+
+
+
+.prev-date,
+.next-date {
+    /* opacity: .5; */
+}
+
+/* .today? */

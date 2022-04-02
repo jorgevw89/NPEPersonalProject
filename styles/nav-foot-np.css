@@ -1,0 +1,41 @@
+:root {
+    --ruby: #982649;
+    --lsbl: #BCD2EE;
+    --dcbl: #26408B;
+    --spbl: #171738;
+    --black: #000000;
+    --white: #eeeeee; 
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* this is where you'll probs define your font family font-family: blah blah */
+}
+
+.menu {
+    color: var(--white);
+    width: 100%;
+    font-size: 30px;
+    height: 12rem;
+    background-color: var(--dcbl);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 2rem;
+    text-align: center;
+    word-spacing: 10px;
+}
+
+.upleftad {
+    
+}
+
+.leftbar {
+
+}
+
+.loleftad {
+
+}
