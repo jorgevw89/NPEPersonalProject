@@ -29,8 +29,8 @@ html {
 }
 
 .calendar {
-    width: 90%;
-    height: 80%;
+    width: 90rem;
+    height: 104rem;
     background-color: var(--lsbl);
     /* box-shadow: 0 0.5rem 3rem black */
 }
@@ -44,42 +44,50 @@ html {
     align-items: center;
     padding: 0 2rem;
     text-align: center;
+    /* text shadow would go here if you wanted */
 }
 
 .month i {
-    font-size: 5rem;
+    font-size: 4rem;
     cursor: pointer;
 }
 
 .month h1{
-    font-size: 5rem;
-    font-weight: 300;
-    margin-bottom: .25rem ;
+    font-size: 4rem;
+    font-weight: 400;
+    /* text-transform: uppercase; */
+    letter-spacing: 0.2rem;
+    margin-bottom: 1rem ;
 }
 
 .month p {
-    font-size: 3rem;
+    font-size: 2rem;
 }
 
 .weekdays {
     width: 100%;
     height: 5rem;
+    padding: 0 0.8rem;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
-    margin: 0 3rem;
+    /* justify-content: space-evenly;
+    margin: 0 3rem; */
 }
 
 .weekdays div{
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
     color: var(--black);
-    padding: 7px;
-    margin: 7px;
-    width: calc(105rem/7);
+    /* padding: 7px; */
+    /* margin: 7px; */ 
+    width: calc(88.4rem/7);
+    /* Width = X; Padding on either side is Y (left + right); want 1/7th total width so: (X-Y)/7 */
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 3.5rem;
-    font-weight: 200;
+    /* font-size: 3.5rem; */
+    /* font-weight: 200; */
     border: var(--black) 2px solid;
 }
 
@@ -88,18 +96,19 @@ html {
     display: flex;
     /* justify-content:; */
     flex-wrap: wrap;
-    padding: 5rem;
-    
+    padding: 0.4rem;  
 }
 
 .days div{
     color: var(--black);
-    font-size: 3rem;
-    width:calc(105rem/7);
-    height: 10rem;
+    font-size: 2rem;
+    margin: 0.6rem;
+    width:calc(80.4rem/7); 
+    /* dividing width of calendar by 7 but must omit the margins/padding: subtract margin and padding from width if margin on each side is .3 rem, looking at .3x14 (7 days) = 4.2 + .4 (padding on either side added already) */
+    height: 13rem;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
     border: var(--black) 2px solid;
 }
 
