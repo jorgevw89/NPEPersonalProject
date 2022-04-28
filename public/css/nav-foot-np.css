@@ -230,7 +230,7 @@ ul.nav-list {
     ul.nav-list li a {
         text-decoration: none;
         color: white;
-        padding: 0.8rem 1rem;
+        padding: 0.8rem 5rem;
         display: flex;
     }
     
