@@ -3,7 +3,7 @@ const siteData = require('../data/siteData');
 const passport = require('passport');
 
 module.exports = {
-    home: (req, res) => {
+    index: (req, res) => {
         res.render('pages/index', {
             name: siteData.userName,
             signedIn: siteData.signedIn

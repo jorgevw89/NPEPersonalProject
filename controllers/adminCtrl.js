@@ -1,4 +1,3 @@
-const siteData = require('../data/siteData');
 const Event = require('../models/eventModel');
 // const Author = require('../models/authorModel');
 
@@ -6,7 +5,6 @@ module.exports = {
   admin: (req, res) => {
     if (request.isAuthenticated()) {
       res.render('pages/admin', {
-        copyrightYear: siteData.year
       });
     } else {
       response.redirect('/login')
@@ -19,8 +17,7 @@ module.exports = {
           return error;
         } else {
           response.render('pages/adminEvents', {
-            copyrightYear: siteData.year,
-            inventoryArray: allBooks
+            // inventoryArray: allEvents
           });
         }
       })
@@ -31,7 +28,6 @@ module.exports = {
   create_event: (req, res) => {
     if (req.isAuthenticated()) {
       res.render('pages/addEvent', {
-        copyrightYear: siteData.year,
       });
     } else {
       res.redirect('/login')
