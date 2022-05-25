@@ -1,37 +1,34 @@
+require('dotenv').config();
 const express = require('express');
-
-const app  = express();
-
-const PORT = 3000;
-
-const path = require('path');
-
 const morgan = require('morgan');
+const path = require('path');
+const methodOverride = require('method-override');
+const session = require('express-session');
+const passport = require('passport');
+const routes = require('./routes/index');
+const app  = express();
+const PORT = 3000;
 
 app.set('view engine', 'ejs');
 
 app.use(express.static(path.join(__dirname, 'public')));
-
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+app.use( methodOverride('_method'));
 app.use(morgan('combined'));
 
-app.get('/', (req, res) => {
-    res.render('pages/index', {
-        name: userName,
-        copyrightYear: year,
-        signedIn: true,
-    });
-});
+app.use(session({
+    secret: process.env.SECRET_KEY,
+    resave: false,
+    saveUninitialized: false
+}));
 
-const Event = require('./models/eventModel');
+app.use(passport.initialize());
+app.use(passport.session());
 
-app.get('/home', (req, res) => {
-    res.render('pages/homepg-np', {
-        name: userName,
-        copyrightYear: year,
-        signedIn: true,
-        //inventoryArray: eventsInventory,
-    });
-});
+app.use(routes);
+
+require('./config/connection');
 
 app.listen(PORT, () => {
     console.log(`Server listening on port ${PORT}`);

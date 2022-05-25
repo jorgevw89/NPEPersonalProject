@@ -1,18 +1,18 @@
 const siteData = require('../data/siteData');
-const Book = require('../models/bookModel');
-const Author = require('../models/authorModel');
+const Event = require('../models/eventModel');
+// const Author = require('../models/authorModel');
 
 module.exports = {
-  admin: (request, response) => {
+  admin: (req, res) => {
     if (request.isAuthenticated()) {
-      response.render('pages/admin', {
+      res.render('pages/admin', {
         copyrightYear: siteData.year
       });
     } else {
       response.redirect('/login')
     }
   },
-  admin_events: (request, response) => {
+  admin_events: (req, res) => {
     if(request.isAuthenticated()){
       Event.find({}, (error, allEvents) => {
         if(error){
@@ -25,16 +25,16 @@ module.exports = {
         }
       })
     } else {
-      response.redirect('/login')
+      res.redirect('/login')
     }
   },
-  create_event: (request, response) => {
-    if (request.isAuthenticated()) {
-      response.render('pages/addEvent', {
+  create_event: (req, res) => {
+    if (req.isAuthenticated()) {
+      res.render('pages/addEvent', {
         copyrightYear: siteData.year,
       });
     } else {
-      response.redirect('/login')
+      res.redirect('/login')
     }
   }
 };

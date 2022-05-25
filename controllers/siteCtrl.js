@@ -1,7 +1,5 @@
-const User = requre('../models/userMode');
-const siteData = requrie('../data/siteData');
-const req = require('express/lib/request');
-const res = require('express/lib/response');
+const User = require('../models/userModel');
+const siteData = require('../data/siteData');
 const passport = require('passport');
 
 module.exports = {

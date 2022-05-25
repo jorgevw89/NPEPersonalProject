@@ -39,10 +39,10 @@ passport.deserializeUser(function(user, cb) {
 passport.use(new GoogleStrategy({
   clientID: process.env.CLIENT_ID,
   clientSecret: process.env.CLIENT_SECRET,
-  callbackURL: "http://localhost:3000/auth/google/home"
+  callbackURL: "http://localhost:3000/auth/google/index"
 },
-function(accessToken, refreshToken, email, cb) {
-  User.findOrCreate({ googleId: email.id }, function (err, user) {
+function(accessToken, refreshToken, profile, cb) {
+  User.findOrCreate({ googleId: profile.id }, function (err, user) {
     return cb(err, user);
   });
 }
