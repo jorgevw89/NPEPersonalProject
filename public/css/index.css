@@ -18,105 +18,299 @@ html {
     font-size: 40%
 }
 
-.container {
-    width: 100%;
-    height: 100vh;
-    /* background-color: var(--lsbl); */
-    color: var(--white) ;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+
+@media screen and (min-width: 320px) {
+
+    .cal-container {
+        width: 100%;
+        height: 100vh;
+        color: var(--white) ;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .calendar {
+        width: 100%;
+        height: 100%;
+        background-color: var(--lsbl);
+    }
+    
+    .month {
+        width: 100%;
+        height: 15rem;
+        background-color: var(--spbl);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 2rem;
+        text-align: center;
+    }
+    
+    .month i {
+        font-size: 4rem;
+        cursor: pointer;
+    }
+    
+    .month h1{
+        font-size: 4rem;
+        font-weight: 400;
+        letter-spacing: 0.2rem;
+        text-align: center;
+        border: 10px solid transparent;
+        padding: 0px;
+    }
+    
+    .month p {
+        font-size: 2rem;
+    }
+    
+    .weekdays {
+        width: 100%;
+        height: 10rem;
+        display: flex;
+        align-items: center;
+        align-self: center;
+        align-content: center;
+        justify-content: center;
+    }
+    
+    .weekdays div{
+        font-size: 3rem;
+        font-weight: 800;
+        height: 7rem;
+        letter-spacing: 0.1rem;
+        color: var(--spbl);
+        width: calc(97%/7);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: var(--spbl) 2px solid;
+    }
+    
+    .days{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .days div{
+        font-size: 3rem;
+        font-weight: 800;
+        letter-spacing: 0.1rem;
+        color: var(--spbl);
+        width:calc(97%/7); 
+        height: 18rem;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-start;
+        border: var(--spbl) 2px solid;
+    }
+    
+    
+    
+    .prev-date,
+    .next-date {
+        /* opacity: .5; */
+    }
+
 }
+@media screen and (min-width: 768px) {
 
-.calendar {
-    width: 90rem;
-    height: 104rem;
-    background-color: var(--lsbl);
-    /* box-shadow: 0 0.5rem 3rem black */
+    .cal-container {
+        width: 100%;
+        height: 100vh;
+        color: var(--white) ;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .calendar {
+        width: 100%;
+        height: 100%;
+        background-color: var(--lsbl);
+    }
+    
+    .month {
+        width: 100%;
+        height: 15rem;
+        background-color: var(--spbl);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 2rem;
+        text-align: center;
+    }
+    
+    .month i {
+        font-size: 4rem;
+        cursor: pointer;
+    }
+    
+    .month h1{
+        font-size: 6rem;
+        font-weight: 400;
+        letter-spacing: 0.2rem;
+        text-align: center;
+        border: 10px solid transparent;
+        padding: 0px;
+    }
+    
+    .month p {
+        font-size: 3rem;
+    }
+    
+    .weekdays {
+        width: 100%;
+        height: 10rem;
+        display: flex;
+        align-items: center;
+        align-self: center;
+        align-content: center;
+        justify-content: center;
+    }
+    
+    .weekdays div{
+        font-size: 4rem;
+        font-weight: 800;
+        height: 7rem;
+        letter-spacing: 0.1rem;
+        color: var(--spbl);
+        width: calc(97%/7);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: var(--spbl) 2px solid;
+    }
+    
+    .days{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .days div{
+        font-size: 4rem;
+        font-weight: 800;
+        letter-spacing: 0.1rem;
+        color: var(--spbl);
+        width:calc(97%/7); 
+        height: 18rem;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-start;
+        border: var(--spbl) 2px solid;
+    }
+    
+    
+    
+    .prev-date,
+    .next-date {
+        /* opacity: .5; */
+    }
+
 }
+@media screen and (min-width: 1024px) {
 
-.month {
-    width: 100%;
-    height: 12rem;
-    background-color: var(--spbl);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 2rem;
-    text-align: center;
-    /* text shadow would go here if you wanted */
+    .cal-container {
+        width: 100%;
+        height: 100vh;
+        color: var(--white) ;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .calendar {
+        width: 100%;
+        height: 100%;
+        background-color: var(--lsbl);
+    }
+    
+    .month {
+        width: 100%;
+        height: 15rem;
+        background-color: var(--spbl);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 2rem;
+        text-align: center;
+    }
+    
+    .month i {
+        font-size: 4rem;
+        cursor: pointer;
+    }
+    
+    .month h1{
+        font-size: 6rem;
+        font-weight: 400;
+        letter-spacing: 0.2rem;
+        text-align: center;
+        border: 10px solid transparent;
+        padding: 0px;
+    }
+    
+    .month p {
+        font-size: 3rem;
+    }
+    
+    .weekdays {
+        width: 100%;
+        height: 10rem;
+        display: flex;
+        align-items: center;
+        align-self: center;
+        align-content: center;
+        justify-content: center;
+    }
+    
+    .weekdays div{
+        font-size: 4rem;
+        font-weight: 800;
+        height: 7rem;
+        letter-spacing: 0.1rem;
+        color: var(--spbl);
+        width: calc(97%/7);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: var(--spbl) 2px solid;
+    }
+    
+    .days{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .days div{
+        font-size: 4rem;
+        font-weight: 800;
+        letter-spacing: 0.1rem;
+        color: var(--spbl);
+        width:calc(97%/7); 
+        height: 18rem;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-start;
+        border: var(--spbl) 2px solid;
+    }
+    
+    
+    
+    .prev-date,
+    .next-date {
+        /* opacity: .5; */
+    }
+
 }
-
-.month i {
-    font-size: 4rem;
-    cursor: pointer;
-}
-
-.month h1{
-    font-size: 4rem;
-    font-weight: 400;
-    /* text-transform: uppercase; */
-    letter-spacing: 0.2rem;
-    margin-bottom: 1rem ;
-}
-
-.month p {
-    font-size: 2rem;
-}
-
-.weekdays {
-    width: 100%;
-    height: 5rem;
-    padding: 0 0.8rem;
-    display: flex;
-    align-items: center;
-    /* justify-content: space-evenly;
-    margin: 0 3rem; */
-}
-
-.weekdays div{
-    font-size: 2rem;
-    font-weight: 400;
-    letter-spacing: 0.1rem;
-    color: var(--black);
-    /* padding: 7px; */
-    /* margin: 7px; */ 
-    width: calc(88.4rem/7);
-    /* Width = X; Padding on either side is Y (left + right); want 1/7th total width so: (X-Y)/7 */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* font-size: 3.5rem; */
-    /* font-weight: 200; */
-    border: var(--black) 2px solid;
-}
-
-.days{
-    width: 100%;
-    display: flex;
-    /* justify-content:; */
-    flex-wrap: wrap;
-    padding: 0.4rem;  
-}
-
-.days div{
-    color: var(--black);
-    font-size: 2rem;
-    margin: 0.6rem;
-    width:calc(80.4rem/7); 
-    /* dividing width of calendar by 7 but must omit the margins/padding: subtract margin and padding from width if margin on each side is .3 rem, looking at .3x14 (7 days) = 4.2 + .4 (padding on either side added already) */
-    height: 13rem;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    border: var(--black) 2px solid;
-}
-
-
-
-.prev-date,
-.next-date {
-    /* opacity: .5; */
-}
-
-/* .today? */

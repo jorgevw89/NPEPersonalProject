@@ -11,98 +11,113 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* this is where you'll probs define your font family font-family: blah blah */
+    /* this is where you'll probs define your font-family: blah blah */
 }
 
 header {
-    background-color: var(--dcbl);
-    width: 100%
+    display: flex;        
 }
 
-.navbar {
-    color: var(--white);
-    width: 100%;
-    font-size: 5rem;
-    height: 12rem;
-    background-color: var(--dcbl);
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 0 2rem;
-    text-align: center;
-    word-spacing: 10px;
+a.menu {
+    display: block;
+    color: white;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
 }
 
 nav.navbar {
     width: 100%;
-    height: 20rem;
+    height: 25rem;
     display: flex;
+    background-color: var(--dcbl);
 }
-/* .home open */
-/* .about open */
-/* .events open */
 
-/* a.menu {
-	display: block;
-	color: white;
-	position: absolute;
-    right: 0;
-    top: 0;
-	padding: 0.5rem 1rem;
-    margin-top: 1rem;
-} */
-
-/* nav.navbar {
-    display: none;
-} */
-
-/* nav.navbar.open {
-    display: block;
-} */
-
-
-ul.nav-list li {
-    list-style: none;
+.nav-list {
+    margin-top: 18rem;
+    display: flex;
+    justify-content: flex-end;
 }
 
 ul.nav-list {
     word-spacing: 10px;
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-right: 5px;
+}
+
+ul.nav.nav-list li {
+    list-style-type: none;
+    list-style: none;
+    display: flex;
+}
+
+/* .emblem? flex: 1  - basically gonna do 1 to 1 to 1?*/
+nav.nav-list {
+    flex: 2;
+}
+
+ul.nav-list li a {
+    text-decoration: none;
+    font-size: 5rem;
+    color: white;
+    padding: 0.8rem 1rem;
+    display: flex;
+}
+
+body {
+    display: flex;
     flex-direction: column;
 }
 
+footer {
+    background-color: var(--dcbl);
+    width: 100%
+}
+
 .pgbottom {
-    background-color: var(--blue);
-    font-size: 1rem;
-    margin: 0 auto;
+    background-color: var(--dcbl);
+    margin: 0 0;
     width: 100%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-content: center;
-    font-family: 'Fredericka the Great', cursive;
     text-align: center;
-    height: 30rem;
+    position: absolute;
+    bottom: 0;
+    height: 40rem;
 } 
 
 .foot-list {
     width: 100%;
-    height: 20rem;
-    display: flex; 
+    height: 30rem;
+    display: flex;
+    flex-direction: column;
+}
+
+ul.foot-list li {
+    list-style-type: none;
+    list-style: none;
+    font-size: 5rem;
+}
+
+ul.foot-list li a {
+    text-decoration: none;
+    color: var(--white)
 }
 
 @media screen and (min-width: 320px) {
     header {
-        background-color: var(--blue);
-        width: 100%;
+        display: flex;        
     }
-    
-    /* .Ad {
-        flex: 1;
-    } */
 
-    /* .emblem? flex: 1  - basically gonna do 1 to 1 to 1?*/
-    
     a.menu {
         display: block;
         color: white;
@@ -112,123 +127,18 @@ ul.nav-list {
         padding: 0.5rem 1rem;
         margin-top: 1rem;
     }
-    
-    nav.navbar {
-        display: none;
-    }
-    
-    nav.navbar.open {
-        display: block;
-    }
-    
-    
-    ul.nav-list li {
-        list-style: none;
-    }
-    
-    ul.nav-list {
-        word-spacing: 10px;
-        display: flex;
-        flex-direction: column;
-    }
-    
-    .pgbottom {
-        background-color: var(--blue);
-        font-size: 1rem;
-        margin: 0 auto;
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-content: center;
-        text-align: center;
-        height: 30rem;
-    } 
-    
-    .visit {
-        list-style-type: none;
-        margin: 0% 6% 0% 0%;
-        color: var(--white);
-    }
-    
-    .links {
-        list-style-type: none;
-        margin: 0% 6% 0% 0%;
-    }
-    
-    .follow {
-        margin: 0% 0% 0% 5%;
-    }
-    
-    .product {
-        margin: 0% 0% 0% 5%;
-    }
-    
-    img {
-        width: 30%;
-        height: auto;
-      }
-    
-    .img-csl {
-        width: 9rem;
-        size: 3rem; 
-    }
-
-    .pgbottom {
-        background-color: var(--blue);
-        font-size: 1rem;
-        margin: 0 auto;
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-content: center;
-        text-align: center;
-        height: 30rem;
-    } 
-    
-    .foot-list {
-        width: 100%;
-        height: 20rem;
-        display: flex; 
-    }
-
-}
-
-@media screen and (min-width: 768px) {
-    header {
-        display: flex;
-    }
-
-    a.menu {
-        display: none;
-    }
 
     nav.navbar {
         width: 100%;
-        height: 20rem;
+        height: 25rem;
         display: flex;
+        background-color: var(--dcbl);
     }
 
     .nav-list {
-        margin-top: 13rem;
-    }
-
-    ul.nav.nav-list li {
-        list-style-type: none;
-    }
-
-
-    /* .Comics-Logo {
-        flex: 1;
-    } */
-
-    nav.navbar {
-        flex: 2;
-    }
-
-    ul.nav-list li {
-        list-style: none;
+        margin-top: 18rem;
+        display: flex;
+        justify-content: flex-end;
     }
 
     ul.nav-list {
@@ -242,106 +152,20 @@ ul.nav-list {
         margin-right: 5px;
     }
 
-
-    
-    ul.nav-list li a {
-        text-decoration: none;
-        color: white;
-        padding: 0.8rem 5rem;
-        display: flex;
-    }
-    
-    .pgbottom {
-        background-color: var(--blue);
-        border-top: var(--yellow) 5px solid;
-        color: var(--white);
-        font-size: 1rem;
-        margin: 0 auto;
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        align-content: center;
-        font-family: 'Fredericka the Great', cursive;
-        text-align: center;
-        height: 30rem;
-    } 
-
-
-    .visit {
-        list-style-type: none;
-        color: var(--white);
-    }
-
-    .links {
-        list-style: none;
-    }
-
-    .follow {
-    }
-
-    .pgbottom {
-        background-color: var(--blue);
-        font-size: 1rem;
-        margin: 0 auto;
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-content: center;
-        text-align: center;
-        height: 30rem;
-    } 
-    
-    .foot-list {
-        width: 100%;
-        height: 20rem;
-        display: flex; 
-    }
-}
-
-@media screen and (min-width: 1024px) { 
-    
-    header {
-        display: flex;
-    }
-
-    a.menu {
-        display: none;
-    }
-
-    nav.navbar {
-        width: 100%;
-        height: 25rem;
-        display: flex;
-    }
-
-    .nav-list {
-        margin-top: 18rem;
-        word-spacing: 10px;
-    }
-
     ul.nav.nav-list li {
         list-style-type: none;
+        list-style: none;
         display: flex;
     }
     
-
-    /* .Ad {
-        flex: 1;
-    } */
-
     /* .emblem? flex: 1  - basically gonna do 1 to 1 to 1?*/
-    nav.navbar {
+    nav.nav-list {
         flex: 2;
     }
 
-    ul.nav-list li {
-        list-style: none;
-    }
-
     ul.nav-list li a {
         text-decoration: none;
+        font-size: 5rem;
         color: white;
         padding: 0.8rem 1rem;
         display: flex;
@@ -352,80 +176,242 @@ ul.nav-list {
         flex-direction: column;
     }
 
-    .leftbar {
-        display: flex;
-        flex-direction: column;
-        height: 100%;
-        width: 25rem;
-        background-color: var(--dcbl);
-        position: fixed;
-        overflow: auto;
-    }
-
-    .upleftad {
-        display: flex;
-        flex-direction: column;
-        height: 25rem;
-        width: 30rem;
-        background-color: var(--ruby);
-        position: absolute;
-    }
-
-    .myupcoming {
-        display: flex;
-        flex-direction: column;
-        /* data goes here pulling from own upcoming dates */
-    }
-
-    /* .pgbottom {
-        background-color: var(--blue);
-        border-top: var(--yellow) 5px solid;
-        color: var(--white);
-        font-size: 1rem;
-        margin: 0 auto;
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        align-content: center;
-        font-family: 'Fredericka the Great', cursive;
-        text-align: center;
-        height: 17.5rem;
-    }  */
-
-    .visit {
-        list-style-type: none;
-        color: var(--white);
-    }
-
-    .links {
-        list-style-type: none;
-    }
-
-    .follow {
-    }
-
-    /* footer {
+    footer {
         background-color: var(--dcbl);
         width: 100%
-    } */
+    }
     
     .pgbottom {
-        background-color: var(--blue);
-        font-size: 1rem;
-        margin: 0 auto;
+        background-color: var(--dcbl);
+        margin: 0 0;
         width: 100%;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: center;
         align-content: center;
         text-align: center;
-        height: 30rem;
+        position: absolute;
+        bottom: 0;
+        height: 40rem;
     } 
-    /* .foot-list {
+
+    .foot-list {
         width: 100%;
-        height: 20rem;
+        height: 30rem;
         display: flex;
-        flex-direction: 
-    } */
+        flex-direction: column;
+    }
+
+    ul.foot-list li {
+        list-style-type: none;
+        list-style: none;
+        font-size: 5rem;
+    }
+
+    ul.foot-list li a {
+        text-decoration: none;
+        color: var(--white)
+    }
+
+}
+
+@media screen and (min-width: 768px) {
+    header {
+        display: flex;        
+    }
+
+
+    a.menu {
+        display: block;
+        color: white;
+        position: absolute;
+        right: 0;
+        top: 0;
+        padding: 0.5rem 1rem;
+        margin-top: 1rem;
+    }
+
+    nav.navbar {
+        width: 100%;
+        height: 25rem;
+        display: flex;
+        background-color: var(--dcbl);
+    }
+
+    .nav-list {
+        margin-top: 18rem;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    ul.nav-list {
+        word-spacing: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        position: absolute;
+        right: 0;
+        top: 0;
+        margin-right: 5px;
+    }
+
+    ul.nav.nav-list li {
+        list-style-type: none;
+        list-style: none;
+        display: flex;
+    }
+ 
+    /* .emblem? flex: 1  - basically gonna do 1 to 1 to 1?*/
+    nav.nav-list {
+        flex: 2;
+    }
+
+    ul.nav-list li a {
+        text-decoration: none;
+        font-size: 5rem;
+        color: white;
+        padding: 0.8rem 1rem;
+        display: flex;
+    }
+
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+
+    footer {
+        background-color: var(--dcbl);
+        width: 100%
+    }
+    
+    .pgbottom {
+        background-color: var(--dcbl);
+        margin: 0 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        text-align: center;
+        position: absolute;
+        bottom: 0;
+        height: 40rem;
+    } 
+
+    .foot-list {
+        width: 100%;
+        height: 30rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    ul.foot-list li {
+        list-style-type: none;
+        list-style: none;
+        font-size: 5rem;
+    }
+
+    ul.foot-list li a {
+        text-decoration: none;
+        color: var(--white)
+    }
+
+} 
+
+@media screen and (min-width: 1024px) { 
+    
+    header {
+        display: flex;        
+    }
+
+    a.menu {
+        display: none;
+    }
+
+    nav.navbar {
+        width: 100%;
+        height: 25rem;
+        display: flex;
+        background-color: var(--dcbl);
+    }
+
+    .nav-list {
+        margin-top: 18rem;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    ul.nav-list {
+        word-spacing: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        position: absolute;
+        right: 0;
+        top: 0;
+        margin-right: 5px;
+    }
+
+    ul.nav.nav-list li {
+        list-style-type: none;
+        list-style: none;
+        display: flex;
+    }
+ 
+    /* .emblem? flex: 1  - basically gonna do 1 to 1 to 1?*/
+    nav.nav-list {
+        flex: 2;
+    }
+
+    ul.nav-list li a {
+        text-decoration: none;
+        font-size: 5rem;
+        color: white;
+        padding: 0.8rem 1rem;
+        display: flex;
+    }
+
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    footer {
+        background-color: var(--dcbl);
+        width: 100%
+    }
+    
+    .pgbottom {
+        background-color: var(--dcbl);
+        margin: 0 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        text-align: center;
+        position: absolute;
+        bottom: 0;
+        height: 40rem;
+    } 
+
+    .foot-list {
+        width: 100%;
+        height: 30rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    ul.foot-list li {
+        list-style-type: none;
+        list-style: none;
+        font-size: 5rem;
+    }
+
+    ul.foot-list li a {
+        text-decoration: none;
+        color: var(--white)
+    }
+
 } 
