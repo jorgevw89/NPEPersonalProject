@@ -43,7 +43,7 @@ module.exports = {
                 res.redirect('/login');
             } else {
                 passport.authenticate('local')(req, res, () => {
-                    res.redirect('/admin');
+                    res.redirect('/index');
                 });
             }
         });
@@ -56,7 +56,7 @@ module.exports = {
     google_redirect_get: [
         passport.authenticate('google', {failureRedirect: '/login'}),
         function(req, res) {
-            res.redirect('/admin');
+            res.redirect('/index');
         }
     ]
 }

@@ -1,3 +1,4 @@
+const { response } = require('express');
 const Event = require('../models/eventModel');
 
 module.exports = {
@@ -11,9 +12,20 @@ module.exports = {
                 });
             }
         });
+    },
+    event_create_post: (req, res) => {
+        const {eventName, eventDate, eventTime, eventType, aboutEvent} = req.body;
+        const newEvent = new Event ({
+            busName: busName,
+           eventName: eventName,
+           eventDate: eventDate,
+           eventTime: eventTime,
+           eventType: eventType,
+           aboutEvent: aboutEvent 
+        });
+
+        newEvent.save();
+
+        response.redirect("pages/index");
     }
-    // event_create_post: (req, res) => {
-    //     console.log(req.body);
-    //     const { eventName, eventDate,}
-    // }
 }

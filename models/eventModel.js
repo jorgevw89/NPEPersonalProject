@@ -4,6 +4,11 @@ const {Schema} = mongoose;
 
 const eventSchema = new Schema({
     //_id: Number,
+    busName: {
+    type: String,
+    required: [true, 'Your business name is required'],
+    minlength: [1, 'Minimum length for the business name is 1 character.']
+    },
     eventName: {
     type: String,
     required: [true, 'An event name is required.'],

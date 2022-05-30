@@ -2,30 +2,25 @@
     
 <%- include('../partials/navbar') -%> 
 
-<body>
-    <div class="eventsList">
         <!-- One column, all Events listed in date order, with past events greyed out. Would be good to be able to have an add info button at the bottom so folks can add how many attendees they had, or any other info they may have like notes on if this will be annual. This will allow for clients of the website to be able to take stock of what they've done and then adjust if necessary for the next event(s). -->
-        <%=event data=%>
-        <br>
-        <!--<%=event data=%>-->
-        <br>
-        <!--<%=event data=%>-->
-        <br>
-        <!--<%=event data=%>-->
-        <br>
-        <!--<%=event data=%>-->
-        <br>
-        <!--<%=event data=%>-->
-        <br>
-        <!--<%=event data=%>-->
-        <br>
-        <!--<%=event data=%>-->
-        <br>
-        <!--<%=event data=%>-->
-        <br>
-        <!--<%=event data=%>
-    </div>
-</body>
-</html>
+       <!-- main-content section starts  -->
+
+<section class="eventsList" id="eventList">
+
+    <h1 class="heading"> <span>Events</span> </h1>
+
+      <div class="main-content-layout">
+        <!-- Using a for...of loop, loop through the authoryArray and display each author -->
+        <% for (event of eventArray)  { %>
+          <a href="/events/<%= event._id %>" class="box">
+              <div class="content">
+                  <h3><%= event.eventName %> <%= event.eventDate %></h3>
+              </div>
+          </a>
+          <% } %> 
+        </div>
+
+</section>
+
 
 <%- include('../partials/footer') -%> 
