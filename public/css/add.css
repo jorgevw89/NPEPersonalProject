@@ -1,0 +1,88 @@
+:root {
+    --ruby: #982649;
+    --lsbl: #BCD2EE;
+    --dcbl: #26408B;
+    --spbl: #171738;
+    --black: #000000; 
+  }
+  
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* this is where you'll probs define your font family font-family: blah blah */
+  }
+  
+  html {
+    font-size: 30rem;
+  }
+  
+  h1{
+    font-size: 10rem;
+    text-align: center;
+  }
+  
+  
+  .container {
+    background-color: var(--lsbl);
+    font-size: 1rem;
+    color: var(--black);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: var(--dcbl) solid 1px;
+    width: 200rem;
+    align-self: center;
+    margin: auto;
+    padding: 10rem;
+  }
+  
+  .box {
+    font-size: 5rem;
+  }
+  
+  .content {
+    color: var(--black);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    align-self: center;
+    margin: auto;
+    padding:1rem;
+  }
+  
+  .button {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    margin:auto;
+  }
+  
+  .form-group{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: center;
+  }
+
+  input {
+    text-rendering: auto;
+    color: fieldtext;
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: 10px;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    appearance: auto;
+    -webkit-rtl-ordering: logical;
+    cursor: text;
+    background-color: field;
+    margin: 0em;
+    padding: 1px 2px;
+    border-width: 2px;

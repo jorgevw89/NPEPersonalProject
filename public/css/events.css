@@ -1,7 +1,223 @@
 :root {
-    --ruby: #982649;
-    --lsbl: #BCD2EE;
-    --dcbl: #26408B;
-    --spbl: #171738;
-    --black: #000000; 
+  --ruby: #982649;
+  --lsbl: #BCD2EE;
+  --dcbl: #26408B;
+  --spbl: #171738;
+  --black: #000000; 
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* this is where you'll probs define your font family font-family: blah blah */
+}
+
+html {
+  font-size: 30rem;
+}
+
+h1{
+  font-size: 10rem;
+  text-align: center;
+}
+
+.eventBox {
+  background-color: var(--lsbl);
+  font-size: 1rem;
+  color: var(--black);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: var(--dcbl) solid 1px;
+  width: 50rem;
+  align-self: center;
+  margin: auto;
+  padding: 10rem;
+}
+
+.box {
+  font-size: 2rem;
+}
+
+.content {
+  color: var(--black);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width:100%;
+  align-self: center;
+  margin: auto;
+  padding:1rem;
+}
+
+.button {
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  margin:auto;
+}
+
+.form-group{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+
+
+@media screen and (min-width: 320px) {
+  h1{
+    font-size: 10rem;
+    text-align: center;
   }
+
+  .eventBox {
+    background-color: var(--lsbl);
+    font-size: 1rem;
+    color: var(--black);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: var(--dcbl) solid 1px;
+    width: 50rem;
+    align-self: center;
+    margin: auto;
+    padding: 10rem;
+  }
+
+  .box {
+    font-size: 2rem;
+  }
+
+  .content {
+    color: var(--black);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    align-self: center;
+    margin: auto;
+    padding:1rem;
+  }
+
+  .button {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    margin:auto;
+  }
+
+  .form-group{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 768px) {
+h1{
+    font-size: 10rem;
+    text-align: center;
+  }
+
+  .eventBox {
+    background-color: var(--lsbl);
+    font-size: 1rem;
+    color: var(--black);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: var(--dcbl) solid 1px;
+    width: 100rem;
+    align-self: center;
+    margin: auto;
+    padding: 10rem;
+  }
+
+  .box {
+    font-size: 3rem;
+  }
+
+  .content {
+    color: var(--black);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    align-self: center;
+    margin: auto;
+    padding:1rem;
+  }
+
+  .button {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    margin:auto;
+  }
+
+  .form-group{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+
+  h1{
+    font-size: 10rem;
+    text-align: center;
+  }
+
+  .eventBox {
+    background-color: var(--lsbl);
+    font-size: 1rem;
+    color: var(--black);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: var(--dcbl) solid 1px;
+    width: 150rem;
+    align-self: center;
+    margin: auto;
+    padding: 10rem;
+  }
+
+  .box {
+    font-size: 4rem;
+  }
+
+  .content {
+    color: var(--black);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    align-self: center;
+    margin: auto;
+    padding:1rem;
+  }
+
+  .button {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    margin:auto;
+  }
+
+  .form-group{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}

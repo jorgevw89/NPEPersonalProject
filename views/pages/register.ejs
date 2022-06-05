@@ -1,5 +1,9 @@
+<%- include('../partials/header') -%> 
+    
+<%- include('../partials/navbar') -%> 
+
 <body>
-    <h1>Register to view or add Events</h1>
+    <h1>  </h1>
     <div class="container">
         <h2>Register Here</h2>
         <p></p>
@@ -7,28 +11,26 @@
             <form action="/register" method="POST">
             <label for="BusName">Non-Profit Business Name:<span class="form-group-required">*</span></label>
             <input type="text" name="BusName" id="BusName" placeholder="What is your Non-Profit Business Called?" required>
-            <label for="email">Email Address (use a company general email, not an individual's if possible):<span class="form-group-required">*</span></label>
+            <label for="email">Email Address (use a company general email):<span class="form-group-required">*</span></label>
             <input type="email" name="email" id="email" placeholder="your email address" required>
             <label for="password">Password:</label>
             <input type="password" name="password" id="pasword" placeholder="your password" required> 
             <label for="about">About:</label>
             <input type="text" name="about" id="about" placeholder="Tell us a little about your Non-Profit Business." required>
-            <label for="SocialMedia">Social Media:</label>
-            <input type="links" name="links" id="links" placeholder="Add your Social Media Links here!">
-            <label for="upload">Upload 5013C:</label>
-            <input type="upload" name="upload" id="upload" required>
         </div>
         <p></p>
             <button class="button" type="submit">Register</button>
 
-            <button>
+            <button class="button">
                 <a href="/auth/google" role="button">Register using Google</a>
             </button>
         </form>
         <div class="rec-reg">
             <a href="#">Forgot Password</a>
-            <p>Don't have an account yet?<a href="/register">Register Here</a></p>
+            <a href="/login">Login Here</a></p>
         </div>
     </div>
 </body>
 </html>
+
+<%- include('../partials/footer') -%> 

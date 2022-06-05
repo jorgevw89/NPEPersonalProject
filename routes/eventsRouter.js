@@ -6,9 +6,8 @@ router.route('/')
 .get(eventsCtrl.all_events)
 .post(eventsCtrl.event_create_post)
 
-// router.route('/:_id')
-// .get(eventsCtrl.event_detail)
-// .put(eventsCtrl.event_update_put)
-// .delete(eventsCtrl.event_delete)
+router.route('/addEvent')
+.get(eventsCtrl.make_event)
+.post(eventsCtrl.event_create_post)
 
 module.exports = router;

@@ -3,29 +3,29 @@
 <%- include('../partials/navbar') -%> 
 
 <body>
-    <h1>Add Event</h1>
+    <h1>     </h1>
     <div class="container">
-        <form action="/events" method="POST">
+        <form action="/events/addEvent" method="POST">
             <h2>Add Your Event Here</h2>
             <p></p>
             <div class="form-group">
-                <label for="BusName">Event Name:<span class="form-group-required">*</span></label>
-                <input type="text" name="EventName" id="EventName" required>
+                <label for="busName">Business Name:<span class="form-group-required">*</span></label>
+                <input type="text" name="busName" id="busName" required>
+                
+                <label for="eventName">Event Name:<span class="form-group-required">*</span></label>
+                <input type="text" name="eventName" id="eventName" required>
 
-                <label for="date picker">Date of Event:<span class="form-group-required">*</span></label>
-                <input type="date pick" name="date pick" id="date pick" required>
+                <label for="eventDate">Date of Event:<span class="form-group-required">*</span></label>
+                <input type="date" name="eventDate" id="eventDate" required>
 
-                <label for="time pick">Time of Event:<span class="form-group-required">*</span></label>
-                <input type="time dropdown" name="time dropdown" id="time pick" required>
+                <label for="eventTime">Time of Event:<span class="form-group-required">*</span></label>
+                <input type="time" name="eventTime" id="eventTime" required>
 
-                <label for="type of Event">What type of event is this (check all that apply):<span class="form-group-required">*</span></label> Fundraiser, Awareness, In-Person, Video Conference, Free, Donations accepted, etc.
-                <input type="multiple choice" name="multiple choice" id="event type pick" required>
+                <label for="eventType">What type of event is this:<span class="form-group-required">*</span></label> (Fundraiser, Awareness, etc.)
+                <input type="text" name="eventType" id="eventType" required>
 
-                <label for="about">About:</label>
-                <input type="text" name="about" id="about" placeholder="Tell us a little about your Event." required>
-
-                <label for="SocialMedia">Social Media:</label>
-                <input type="links" name="links" id="links" placeholder="Add social media links to your event here!">
+                <label for="aboutEvent">About:</label>
+                <input type="text" name="aboutEvent" id="aboutEvent" placeholder="Tell us a little about your Event." required>
             </div>
             <p></p>
             <button class="button" type="submit">Submit</button>
