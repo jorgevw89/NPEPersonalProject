@@ -1,13 +1,22 @@
 const User = require('../models/userModel');
+const Event = require('../models/eventModel');
 const siteData = require('../data/siteData');
 const passport = require('passport');
 
 module.exports = {
     index: (req, res) => {
-        res.render('pages/index', {
-            name: siteData.userName,
-            signedIn: siteData.signedIn
-        });
+        Event.find({}, (err, everyEvent) => {
+            if(err) {
+                return err
+            } else {
+                res.render('pages/index', {
+                    name: siteData.userName,
+                    signedIn: siteData.signedIn,
+                    everyEvent: everyEvent
+                });
+            }
+        })
+        
     },
     register_get:(req, res) => {
         res.render('pages/register', {

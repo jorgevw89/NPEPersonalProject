@@ -16,14 +16,10 @@ const eventSchema = new Schema({
     eventDate: {
     type: Date,
     required: [true, 'An event date is required.']
-    // min: '06/07/2022',
-    // max: '12/31/2032'
     },
     eventTime: {
     type: String,
     required: [true, 'An event time is required.']
-    // min: '0000',
-    // max: '2359'
     },
     eventType: {
     type: String,

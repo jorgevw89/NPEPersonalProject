@@ -102,8 +102,8 @@ footer {
     justify-content: center;
     align-content: center;
     text-align: center;
-    position: absolute;
-    bottom: 0;
+    /* position: absolute;
+    bottom: 0; */
     height: 40rem;
 } 
 
@@ -216,8 +216,8 @@ ul.foot-list li a {
         justify-content: center;
         align-content: center;
         text-align: center;
-        position: absolute;
-        bottom: 0;
+        /* position: absolute;
+        bottom: 0; */
         height: 40rem;
     } 
 
@@ -323,8 +323,8 @@ ul.foot-list li a {
         justify-content: center;
         align-content: center;
         text-align: center;
-        position: absolute;
-        bottom: 0;
+        /* position: absolute; */
+        /* bottom: 0; */
         height: 40rem;
     } 
 
@@ -402,6 +402,7 @@ ul.foot-list li a {
         list-style: none;
     }
  
+
     nav.nav-list {
         flex: 2;
     }
@@ -434,8 +435,8 @@ ul.foot-list li a {
         justify-content: center;
         align-content: center;
         text-align: center;
-        position: absolute;
-        bottom: 0;
+        /* position: absolute; */
+        /* bottom: 0; */
         height: 40rem;
     } 
 
