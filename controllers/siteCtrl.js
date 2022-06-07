@@ -65,7 +65,7 @@ module.exports = {
     google_redirect_get: [
         passport.authenticate('google', {failureRedirect: '/login'}),
         function(req, res) {
-            res.redirect('/index');
+            res.redirect('/addEvent');
         }
     ]
 }

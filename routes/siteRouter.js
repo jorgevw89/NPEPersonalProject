@@ -18,8 +18,9 @@ router.route('/logout')
 
 router.route('/auth/google')
 .get(siteCtrl.google_get)
-
-router.route('/auth/google/admin')
 .get(siteCtrl.google_redirect_get)
+
+// router.route('/auth/google/admin')
+// .get(siteCtrl.google_redirect_get)
 
 module.exports = router;
