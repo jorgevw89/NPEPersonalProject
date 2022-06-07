@@ -34,7 +34,7 @@ moarBorger.addEventListener('click', openClose);
 //     const lastDayIndex = new Date(
 //         date.getFullYear(),
 //         date.getMonth() + 1,
-//         0).getDaty();
+//         0).getDate();
 
 //     const nextDays = 7 - lastDayIndex - 1;
 

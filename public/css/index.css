@@ -70,6 +70,7 @@ html {
     
     .month p {
         font-size: 2rem;
+        width: 100%;
     }
     
     .weekdays {
@@ -256,7 +257,7 @@ html {
     }
     
     .month h1{
-        font-size: 6rem;
+        font-size: 5rem;
         font-weight: 400;
         letter-spacing: 0.2rem;
         text-align: center;
@@ -266,6 +267,8 @@ html {
     
     .month p {
         font-size: 3rem;
+        align-content: center;
+
     }
     
     .weekdays {

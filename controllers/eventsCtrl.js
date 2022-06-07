@@ -15,6 +15,7 @@ module.exports = {
             }
         });
     },
+    
     make_event: (req, res) => {
         res.render('pages/addEvent');
     },
