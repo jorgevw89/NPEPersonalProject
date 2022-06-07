@@ -30,7 +30,7 @@ module.exports = {
                 res.redirect('pages/register');
             } else {
                 passport.authenticate('local')(req, res, () => { 
-                    res.redirect('pages/login');
+                    res.redirect('pages/index');
                 });
             }
         });
