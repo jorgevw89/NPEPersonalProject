@@ -19,7 +19,7 @@ module.exports = {
         
     },
     register_get:(req, res) => {
-        res.render('pages/register', {
+        res.render('/register', {
         });
     },
     register_post:(req, res) => {
@@ -36,7 +36,7 @@ module.exports = {
         });
     },
     login_get: (req, res) => {
-        res.render('pages/login', {
+        res.render('/login', {
         });
     },
     login_post: (req, res) => {
@@ -52,7 +52,7 @@ module.exports = {
                 res.redirect('/login');
             } else {
                 passport.authenticate('local')(req, res, () => {
-                    res.redirect('/event/addEvent');
+                    res.redirect('pages/index');
                 });
             }
         });
@@ -65,7 +65,7 @@ module.exports = {
     google_redirect_get: [
         passport.authenticate('google', {failureRedirect: '/login'}),
         function(req, res) {
-            res.redirect('/event/addEvent');
+            res.redirect('pages/index');
         }
     ]
 }
