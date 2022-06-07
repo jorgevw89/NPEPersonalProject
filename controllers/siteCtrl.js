@@ -9,7 +9,7 @@ module.exports = {
             if(err) {
                 return err
             } else {
-                res.render('/index', {
+                res.render('pages/index', {
                     name: siteData.userName,
                     signedIn: siteData.signedIn,
                     everyEvent: everyEvent
@@ -19,7 +19,7 @@ module.exports = {
         
     },
     register_get:(req, res) => {
-        res.render('/register', {
+        res.render('pages/register', {
         });
     },
     register_post:(req, res) => {
@@ -27,16 +27,16 @@ module.exports = {
         User.register({username: username}, password, (error, user) => {
             if(error) {
                 console.log(error);
-                res.redirect('/register');
+                res.redirect('pages/register');
             } else {
                 passport.authenticate('local')(req, res, () => { 
-                    res.redirect('/login');
+                    res.redirect('pages/login');
                 });
             }
         });
     },
     login_get: (req, res) => {
-        res.render('/login', {
+        res.render('pages/login', {
         });
     },
     login_post: (req, res) => {
@@ -49,10 +49,10 @@ module.exports = {
         req.login(user, (error) => {
             if (error) {
                 console.log(error)
-                res.redirect('/login');
+                res.redirect('pages/login');
             } else {
                 passport.authenticate('local')(req, res, () => {
-                    res.redirect('/index');
+                    res.redirect('pages/index');
                 });
             }
         });
@@ -63,9 +63,9 @@ module.exports = {
     },
     google_get: passport.authenticate('google', {scope: ['openid', 'profile', 'email']}),
     google_redirect_get: [
-        passport.authenticate('google', {failureRedirect: '/login'}),
+        passport.authenticate('google', {failureRedirect: 'pages/login'}),
         function(req, res) {
-            res.redirect('/index');
+            res.redirect('pages/index');
         }
     ]
 }
