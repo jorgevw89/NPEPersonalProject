@@ -52,7 +52,7 @@ module.exports = {
                 res.redirect('/login');
             } else {
                 passport.authenticate('local')(req, res, () => {
-                    res.redirect('/index');
+                    res.redirect('/event/addEvent');
                 });
             }
         });
