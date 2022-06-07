@@ -17,11 +17,7 @@ module.exports = {
     },
     
     make_event: (req, res) => {
-        if (req.isAuthenticated()) {
-            res.render('pages/addEvent') 
-        } else {
-            res.redirect('/login');
-        } 
+        res.render('pages/addEvent');
     },
     event_create_post: (req, res) => {
         const {busName, eventName, eventDate, eventTime, eventType, aboutEvent} = req.body;
