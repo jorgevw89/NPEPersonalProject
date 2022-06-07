@@ -9,7 +9,7 @@ module.exports = {
             if(err) {
                 return err
             } else {
-                res.render('pages/index', {
+                res.render('/index', {
                     name: siteData.userName,
                     signedIn: siteData.signedIn,
                     everyEvent: everyEvent
@@ -52,7 +52,7 @@ module.exports = {
                 res.redirect('/login');
             } else {
                 passport.authenticate('local')(req, res, () => {
-                    res.redirect('pages/index');
+                    res.redirect('/index');
                 });
             }
         });
@@ -65,7 +65,7 @@ module.exports = {
     google_redirect_get: [
         passport.authenticate('google', {failureRedirect: '/login'}),
         function(req, res) {
-            res.redirect('pages/index');
+            res.redirect('/index');
         }
     ]
 }
